@@ -92,7 +92,7 @@ body{
         width: 320px;
     }
     .header{
-        padding: 50px 15px 50px 15px;
+        padding: 25px 15px 25px 15px;
     }
     .nav-mobile-menu {
         width: 20px;
@@ -117,7 +117,7 @@ body{
         margin: 25px;
     }
     .nav-mobile-menu span:nth-child(1){
-        top: 0px;
+        top: 0;
     }
     .nav-mobile-menu span:nth-child(2){
         top: 5px;
@@ -171,6 +171,9 @@ body{
     .navigation.active-menu .menu__list{
         flex-direction: column;
         height: auto;
+        align-items: flex-start;
+        margin: 100px auto 0 auto;
+        width: 200px;
     }
     .union{
         background-image: url("./img/Union.png");
@@ -178,7 +181,7 @@ body{
         height: 23px;
         background-repeat: no-repeat;
         position: absolute;
-        top: 5px;
+        top: 25px;
         right: 15px;
     }
     .union:hover{
@@ -265,7 +268,7 @@ body{
 .services__row {
     margin-top: 60px;
     display: grid;
-    grid-template-columns: repeat(3, 384px);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 388px);
     justify-content: center;
 }
@@ -278,11 +281,11 @@ body{
     justify-content: center;
     align-items: center;
 }
-.column__body{
-    width: 266px;
+.column__body {
+    width: 85%;
 }
 .column__image{
-    width: 90px;
+    width: 95px;
     height: 90px;
 }
 .column__title {
@@ -332,6 +335,9 @@ body{
 .healthcare__image {
     width: 100%;
     height: 100%;
+}
+.healthcare__image img{
+    width: 100%;
 }
 .healthcare__column .column__body {
     width: 410px;
@@ -396,6 +402,9 @@ body{
 .download__image {
     width: 100%;
     height: 100%;
+}
+.download__image img{
+    width: 100%;
 }
 .download__column .column__body {
     width: 410px;
@@ -465,7 +474,7 @@ body{
     background: url('./img/slider/bg.png') no-repeat left 15% bottom 25%;
 }
 .slider__body {
-    width: 1120px;
+    max-width: 1120px;
     margin: 0 auto;
 
 }
@@ -584,8 +593,9 @@ body{
      /*Устанавливаем и изменяем степень прозрачности: */
     from {
         transform: translateX(50%);
-        opacity: 0.4
+        opacity: 0.0
     }
+    50% {opacity: 0.5}
     to {
         transform: translateX(0);
         opacity: 1
@@ -641,7 +651,7 @@ body{
 .checkout__row {
     margin-top: 100px;
     display: grid;
-    grid-template-columns: repeat(3, 350px);
+    grid-template-columns: repeat(3, 1fr);
     /*grid-template-rows: repeat(2, 1fr);*/
     justify-content: center;
 }
@@ -729,6 +739,7 @@ body{
     padding-bottom: 110px;
     background:url("./img/footer/bg2.png") no-repeat left bottom,
     linear-gradient(183.41deg, #67C3F3 -8.57%, #5A98F2 82.96%) no-repeat;
+    background-size: cover;
 }
 .footer__row {}
 
@@ -822,6 +833,40 @@ body{
     }
     .footer__image:before{
         left: 75px;
+    }
+}
+@media (min-width: 768px) {
+    .container{
+        width: 768px;
+    }
+    .services__row{
+        grid-template-columns: repeat(3, 250px);
+    }
+    .checkout__row {
+        grid-template-columns: repeat(1, 350px);
+    }
+
+}
+@media (min-width: 992px) {
+    .container{
+        width: 992px;
+    }
+    .services__row{
+        grid-template-columns: repeat(3, 270px);
+    }
+    .checkout__row {
+        grid-template-columns: repeat(3, 270px);
+    }
+}
+@media (min-width: 1273px) {
+    .container{
+        width: 1273px;
+    }
+    .services__row{
+        grid-template-columns: repeat(3, 350px);
+    }
+    .checkout__row {
+        grid-template-columns: repeat(3, 350px);
     }
 }
 /*----------------------------------------------------------------------------------*/
