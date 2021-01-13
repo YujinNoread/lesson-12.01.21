@@ -18,13 +18,22 @@
                     <img src="img/logo.png" alt="">
                 </div>
                 <nav class="header__menu">
-                    <ul class="menu__list">
-                        <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Find a doctor</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Apps</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Testimonials</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">About us</a></li>
-                    </ul>
+                    <div class="navigation hidden menu">
+                        <ul class="menu__list">
+                            <span class="union"></span>
+                            <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
+                            <li class="menu__item"><a href="#" class="menu__link">Find a doctor</a></li>
+                            <li class="menu__item"><a href="#" class="menu__link">Apps</a></li>
+                            <li class="menu__item"><a href="#" class="menu__link">Testimonials</a></li>
+                            <li class="menu__item"><a href="#" class="menu__link">About us</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-mobile-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="overlay"></div>
                 </nav>
             </div>
         </div>
@@ -78,7 +87,7 @@
                             <div class="column__text">Free consultation with our trusted doctors and get the best recomendations</div>
                         </div>
                     </div>
-                    <div class="services__column">
+                    <div class="services__column none">
                         <div class="column__body">
                             <div class="column__image">
                                 <img src="img/services/image4.png" alt="">
@@ -87,7 +96,7 @@
                             <div class="column__text">Free consultation with our trusted doctors and get the best recomendations</div>
                         </div>
                     </div>
-                    <div class="services__column">
+                    <div class="services__column none">
                         <div class="column__body">
                             <div class="column__image">
                                 <img src="img/services/image5.png" alt="">
@@ -96,7 +105,7 @@
                             <div class="column__text">You can get 24/7 urgent care for yourself or your children and your lovely family</div>
                         </div>
                     </div>
-                    <div class="services__column">
+                    <div class="services__column none">
                         <div class="column__body">
                             <div class="column__image">
                                 <img src="img/services/image6.png" alt="">
@@ -130,14 +139,14 @@
         <section class="download">
             <div class="container">
                 <div class="row download__row">
-                    <div class="download__column">
+                    <div class="download__column column1">
                         <div class="column__body">
                             <div class="column__title title">Download our mobile apps</div>
                             <div class="column__text">Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely</div>
                             <div class="column__button button">Download</div>
                         </div>
                     </div>
-                    <div class="download__column">
+                    <div class="download__column column2">
                         <div class="download__image">
                             <img src="img/download/image.png" alt="">
                         </div>
@@ -148,7 +157,7 @@
         <section class="slider">
             <div class="container">
                 <div class="slider__body">
-                    <div class="slider__item">
+                    <div class="slider__item slide1">
                         <h3 class="slider__title title">What our customer are saying</h3>
                         <div class="slider__row">
                             <div class="slider__column">
@@ -169,7 +178,79 @@
                             </div>
                         </div>
                     </div>
-                    <div class="slider__controls"></div>
+                    <div class="slider__item slide2">
+                        <h3 class="slider__title title">What our customer are saying</h3>
+                        <div class="slider__row">
+                            <div class="slider__column">
+                                <div class="column__body">
+                                    <div class="body__column">
+                                        <div class="column__image">
+                                            <img src="img/slider/slides/img1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="body__column">
+                                        <div class="column__name">Chavez Newgate</div>
+                                        <div class="column__proff">Founder Circle</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider__column">
+                                <div class="column__text">“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__item slide3">
+                        <h3 class="slider__title title">What our customer are saying</h3>
+                        <div class="slider__row">
+                            <div class="slider__column">
+                                <div class="column__body">
+                                    <div class="body__column">
+                                        <div class="column__image">
+                                            <img src="img/slider/slides/img1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="body__column">
+                                        <div class="column__name">Stevens Chavez</div>
+                                        <div class="column__proff">Founder Circle</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider__column">
+                                <div class="column__text">“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__item slide4">
+                        <h3 class="slider__title title">What our customer are saying</h3>
+                        <div class="slider__row">
+                            <div class="slider__column">
+                                <div class="column__body">
+                                    <div class="body__column">
+                                        <div class="column__image">
+                                            <img src="img/slider/slides/img1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="body__column">
+                                        <div class="column__name">Dunn Newgate</div>
+                                        <div class="column__proff">Founder Circle</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider__column">
+                                <div class="column__text">“Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely”</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__controls">
+                        <a class="previous" onclick="previousSlide()"></a>
+                        <ul class="dots__list">
+                            <li class="dots active" onclick="currentSlide(1)"></li>
+                            <li class="dots" onclick="currentSlide(2)"></li>
+                            <li class="dots" onclick="currentSlide(3)"></li>
+                            <li class="dots" onclick="currentSlide(4)"></li>
+                        </ul>
+                        <a class="next" onclick="nextSlide()"></a>
+                    </div>
                 </div>
             </div>
         </section>
