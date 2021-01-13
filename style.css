@@ -256,6 +256,18 @@ body{
     background-image: url('./img/services/bg.png');
     background-repeat: no-repeat;
     background-position: left 0 top 50%;
+    position: relative;
+}
+.services:after {
+    content: '';
+    background-image: url('./img/services/bg2.png');
+    background-repeat: no-repeat;
+    width: 133px;
+    height: 96px;
+    position: absolute;
+    top: 53%;
+    right: 21%;
+    z-index: -1;
 }
 .services__title {}
 .services__text {
@@ -389,6 +401,18 @@ body{
 /*----------------------------------------------------------------------------------*/
 .download {
     padding-bottom: 130px;
+    position: relative;
+}
+.download:after {
+    content: '';
+    background-image: url('./img/download/bg.png');
+    background-repeat: no-repeat;
+    width: 133px;
+    height: 96px;
+    position: absolute;
+    top: -30%;
+    right: 0;
+    z-index: -1;
 }
 .download__row {
     margin-top: 110px;
@@ -645,6 +669,29 @@ body{
     background-image: url('./img/checkout/bg.png');
     background-repeat: no-repeat;
     background-position: right 0 top 50%;
+    position: relative;
+}
+.checkout:before {
+    content: '';
+    background-image: url('./img/checkout/bg3.png');
+    background-repeat: no-repeat;
+    width: 133px;
+    height: 96px;
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    z-index: -1;
+}
+.checkout:after {
+    content: '';
+    background-image: url('./img/checkout/bg2.png');
+    background-repeat: no-repeat;
+    width: 133px;
+    height: 96px;
+    position: absolute;
+    bottom: -20px;
+    right: 80px;
+    z-index: -1;
 }
 .checkout__title {
 }
@@ -737,9 +784,19 @@ body{
 .footer {
     padding-top: 100px;
     padding-bottom: 110px;
-    background:url("./img/footer/bg2.png") no-repeat left bottom,
-    linear-gradient(183.41deg, #67C3F3 -8.57%, #5A98F2 82.96%) no-repeat;
+    background: linear-gradient(183.41deg, #67C3F3 -8.57%, #5A98F2 82.96%) no-repeat;
     background-size: cover;
+    position: relative;
+}
+.footer:after {
+    content: '';
+    background-image: url('./img/footer/bg2.png');
+    background-repeat: no-repeat;
+    width: 133px;
+    height: 96px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 .footer__row {}
 
