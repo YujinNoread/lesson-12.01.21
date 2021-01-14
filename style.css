@@ -614,16 +614,7 @@ body{
     background: rgba(91, 155, 243, 1);
 }
 @keyframes fade {
-     /*Устанавливаем и изменяем степень прозрачности: */
-    from {
-        transform: translateX(50%);
-        opacity: 0.0
-    }
-    50% {opacity: 0.5}
-    to {
-        transform: translateX(0);
-        opacity: 1
-    }
+    from { opacity: 0.3; -webkit-transform: translateX(100%); transform: translateX(100%); }
 }
 
 .slider__controls {
