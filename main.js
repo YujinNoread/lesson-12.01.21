@@ -27,26 +27,23 @@ union.addEventListener("click",function (){
 /* Устанавливаем стартовый индекс слайда по умолчанию: */
 let slideIndex = 1;
 /* Вызываем функцию, которая реализована ниже: */
-showSlides(slideIndex);
+showSlides(slideIndex, 0);
 
-function showSlides(n) {
+function showSlides(n, position) {
     /* Обращаемся к элементам с названием класса "item", то есть к картинкам: */
-    let slides = document.getElementsByClassName("slider__item");
-    let dots = document.getElementsByClassName("dots")
+    let slides = document.querySelectorAll('.slider__item')
+    let dots = document.querySelectorAll(".dots")
+    let carousel = document.querySelector('.slider__carousel')
     /* Проверяем количество слайдов: */
     if (n > slides.length) {
         slideIndex = 1
+        position=0;
     }
     if (n < 1) {
         slideIndex = slides.length
+        position=(-(slideIndex-1)*100);
     }
-
-    /* Проходим по каждому слайду в цикле for: */
-    for (let slide of slides) {
-        slide.style.display = "none";
-    }
-    /* Делаем элемент блочным: */
-    slides[slideIndex - 1].style.display = "block";
+    carousel.style.transform = `translateX(${(-(n-1)) * position}%)`
 
     for (let dot of dots) {
         dot.classList.remove("active")
@@ -59,14 +56,14 @@ function showSlides(n) {
 let nextBtn = document.querySelector('.next')
 
 nextBtn.addEventListener("click", function () {
-    showSlides(slideIndex += 1);
+    showSlides(slideIndex += 1,100);
 })
 
 /* Уменьшаем индекс на 1 — показываем предыдущий слайд: */
 let previousBtn = document.querySelector('.previous')
 
 previousBtn.addEventListener("click", function () {
-    showSlides(slideIndex -= 1);
+    showSlides(slideIndex -= 1,100);
 })
 
 /* Устанавливаем текущий слайд: */
@@ -74,7 +71,7 @@ let dots = document.querySelectorAll(".dots")
 
 dots.forEach((item,index)=> {
     item.addEventListener("click",function (){
-        showSlides(slideIndex = index+1);
+        showSlides(slideIndex = index+1, 100);
     })
 })
 
