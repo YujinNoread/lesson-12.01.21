@@ -26,8 +26,6 @@ union.addEventListener("click", () => {
 
 /* Устанавливаем стартовый индекс слайда по умолчанию: */
 let slideIndex = 1;
-/* Вызываем функцию, которая реализована ниже: */
-showSlides(slideIndex, 0);
 
 const showSlides = (n, position) => {
     /* Обращаемся к элементам с названием класса "item", то есть к картинкам: */
@@ -51,6 +49,10 @@ const showSlides = (n, position) => {
 
     dots[slideIndex - 1].classList.add("active")
 }
+/* Вызываем функцию, которая реализована выше: */
+showSlides(slideIndex, 0);
+
+
 
 /* Увеличиваем индекс на 1 — показываем следующий слайд: */
 let nextBtn = document.querySelector('.next')
