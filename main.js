@@ -1,6 +1,6 @@
 let viewAll = document.querySelector('.checkout__button')
 
-viewAll.onclick = function (){
+viewAll.onclick = () => {
     let hideBlocks = document.querySelectorAll('.hide')
 
     hideBlocks.forEach((item)=> item.classList.remove('hide'))
@@ -11,7 +11,7 @@ let mobileMenu = document.querySelector(".nav-mobile-menu");
 let mainMenu = document.querySelector(".navigation");
 let union = document.querySelector(".union")
 
-mobileMenu.addEventListener("click",function (){
+mobileMenu.addEventListener("click", () => {
     mobileMenu.classList.toggle("active-menu");
     if(mobileMenu.classList.contains("active-menu")){
         mainMenu.classList.add("active-menu");
@@ -19,7 +19,7 @@ mobileMenu.addEventListener("click",function (){
         mainMenu.classList.remove("active-menu");
     }
 })
-union.addEventListener("click",function (){
+union.addEventListener("click", () => {
     mobileMenu.classList.toggle("active-menu");
     mainMenu.classList.remove("active-menu");
 })
@@ -29,7 +29,7 @@ let slideIndex = 1;
 /* Вызываем функцию, которая реализована ниже: */
 showSlides(slideIndex, 0);
 
-function showSlides(n, position) {
+const showSlides = (n, position) => {
     /* Обращаемся к элементам с названием класса "item", то есть к картинкам: */
     let slides = document.querySelectorAll('.slider__item')
     let dots = document.querySelectorAll(".dots")
@@ -55,14 +55,14 @@ function showSlides(n, position) {
 /* Увеличиваем индекс на 1 — показываем следующий слайд: */
 let nextBtn = document.querySelector('.next')
 
-nextBtn.addEventListener("click", function () {
+nextBtn.addEventListener("click", () => {
     showSlides(slideIndex += 1,100);
 })
 
 /* Уменьшаем индекс на 1 — показываем предыдущий слайд: */
 let previousBtn = document.querySelector('.previous')
 
-previousBtn.addEventListener("click", function () {
+previousBtn.addEventListener("click", () => {
     showSlides(slideIndex -= 1,100);
 })
 
@@ -70,7 +70,7 @@ previousBtn.addEventListener("click", function () {
 let dots = document.querySelectorAll(".dots")
 
 dots.forEach((item,index)=> {
-    item.addEventListener("click",function (){
+    item.addEventListener("click", () => {
         showSlides(slideIndex = index+1, 100);
     })
 })
